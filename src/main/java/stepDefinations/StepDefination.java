@@ -5,14 +5,24 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import utils.CustomWebDriver;
+import utils.Log;
 
 import java.util.List;
 
 public class StepDefination  {
+    public WebDriver driver;
+
 
     @Given("^application is open$")
     public void application_in_open() throws Throwable {
-    System.out.println("application is open");
+        System.out.println("application is open");
+        Log.info("yes");
+        driver = new CustomWebDriver("firefox").getDriver();
+        driver.get("https://stackoverflow.com");
+        driver.quit();
+
 
     }
 
@@ -30,6 +40,7 @@ public class StepDefination  {
     @And("^user closes the broswer$")
     public void user_closes_the_broswer$() throws Throwable{
         System.out.println("user_closes_the_broswer$");
+
 
     }
 
