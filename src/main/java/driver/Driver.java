@@ -7,14 +7,14 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class CustomWebDriver {
+public class Driver {
 
     public WebDriver driver ;
     public DesiredCapabilities capabilities;
     public FirefoxOptions firefoxOptions;
 
 
-    public CustomWebDriver(String browser){
+    public Driver(String browser){
 
 
         if(browser.equalsIgnoreCase("firefox")){
